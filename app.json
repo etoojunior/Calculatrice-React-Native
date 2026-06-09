@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "MontProjetQR",
-    "slug": "MontProjetQR",
+    "name": "Calculatrice",
+    "slug": "Calculatrice",
     "version": "1.0.0",
+    "scheme": "montprojetqr",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,7 +20,19 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Autoriser l'accès à la caméra pour scanner les QR codes."
+        }
+      ],
+      "expo-asset",
+      "expo-font"
+    ]
   }
 }
